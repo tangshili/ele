@@ -10,6 +10,15 @@
 			<div class="swiper-slide">
 				<a href="#"><img src="../../assets/images/swiper-3.png"></a>
 			</div>
+			<div class="swiper-slide">
+				<a href="#"><img src="../../assets/images/swiper-4.png"></a>
+			</div>
+			<div class="swiper-slide">
+				<a href="#"><img src="../../assets/images/swiper-5.png"></a>
+			</div>
+			<div class="swiper-slide">
+				<a href="#"><img src="../../assets/images/swiper-6.png"></a>
+			</div>
 		</div>
 		<div class="swiper-pagination"></div>
 	</div>

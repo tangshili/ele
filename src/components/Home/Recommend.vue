@@ -32,7 +32,7 @@
 		height: 40px;
 		text-align: center;
 		line-height: 50px;
-		font-size:16px;
+		font-size:14px;
 	}
 	
 	.recommend .recommend-list {
@@ -40,6 +40,6 @@
 		height: 40px;
 		text-align: center;
 		line-height:40px;
-		font-size:14px;
+		font-size:12px;
 	}
 </style>

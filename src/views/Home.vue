@@ -6,6 +6,7 @@
 		<package></package>
 		<swiper></swiper>
 		<recommend></recommend>
+		<foot></foot>
 	</div>
 
 </template>
@@ -18,6 +19,7 @@
 	import Package from '@/components/Home/Package.vue'
 	import Swiper from '@/components/Home/Swiper.vue'
 	import Recommend from '@/components/Home/Recommend.vue'
+	import Foot from '@/components/Home/Foot.vue'
 
 	export default {
 		name: 'home',
@@ -27,7 +29,8 @@
 			SuperMember,
 			Package,
 			Swiper,
-			Recommend
+			Recommend,
+			Foot
 		}
 	}
 </script>
