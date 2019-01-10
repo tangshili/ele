@@ -11,17 +11,17 @@
 					<span class="merchant-inflrmatin-open"></span>
 				</div>
 				<div class="merchant-sales-volume">
-					<i style="color:#FFD800;" class="fa fa-star"></i>
-					<i style="color:#FFD000;" class="fa fa-star"></i>
-					<i style="color:#FFC700;" class="fa fa-star"></i>
-					<i style="color:#FFBD00;" class="fa fa-star"></i>
-					<i style="margin-right:8px; color:#FFB200;" class="fa fa-star"></i>
-					<span style="font-size:12px; color:#333333;">4.9&nbsp;&nbsp;月售946单</span>
-					<span class="Delivery">蜂鸟专送</span>
+					<i style="color:#FFD800;" class="fa" :class="item.icon1"></i>
+					<i style="color:#FFD000;" class="fa" :class="item.icon2"></i>
+					<i style="color:#FFC700;" class="fa" :class="item.icon3"></i>
+					<i style="color:#FFBD00;" class="fa" :class="item.icon4"></i>
+					<i style="margin-right:8px; color:#FFB200;" class="fa" :class="item.icon5"></i>
+					<span style="font-size:12px; color:#333333;" v-text="item.score"><span style="margin-left:3px;" v-text="item.number"></span> </span>
+					<span class="Delivery" v-text="item.delivery"></span>
 				</div>
 				<div class="Distribution-fee">
-					<span style="font-size:12px; color:#333333;">￥20元起送<span style="color:#999; margin:0px 3px;">|</span>配送费￥5.3</span>
-					<span style="font-size:12px; color:#666666; float:right;">903米<span style="color:#ccc; margin:0px 3px;">|</span>20分钟</span>
+					<span style="font-size:12px; color:#333333;" v-text="item.start"><span style="color:#999; margin:0px 3px;" v-text="item.line"></span><span style="font-size:12px; color:#333333;" v-text="item.freight"></span> </span>
+					<span style="font-size:12px; color:#666666; float:right;" v-text="item.distance"><span style="color:#ccc; margin:0px 3px;" v-text="item.line"></span><span style="font-size:12px; color:#666666;" v-text="item.time"></span></span>
 				</div>
 				<div class="Varieties">奶茶果汁</div>
 				<div class="Full-reduction">
@@ -48,8 +48,20 @@
 					image: require('../../assets/images/coco-logo.png'),
 					name: '都可(清溪)',
 					logo: 'CoCo',
-					open: '...'
-
+					open: '...',
+					icon1: 'fa-star',
+					icon2: 'fa-star',
+					icon3: 'fa-star',
+					icon4: 'fa-star',
+					icon5: 'fa-star',
+					score: '4.9',
+					number: '月售946单',
+					delivery: '蜂鸟专送',
+					start: '￥20元起送',
+					freight: '配送费￥5.3',
+					line: '|',
+					distance: '903米',
+					time:'20分钟'
 				}]
 			}
 		}
@@ -77,7 +89,7 @@
 	
 	.merchant-information {
 		width: 100%;
-		padding-left: 5px;
+		padding-left: 10px;
 		box-sizing: border-box;
 	}
 	
