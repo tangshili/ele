@@ -24,7 +24,7 @@
 		padding: 0px 10px;
 		box-sizing: border-box;
 		color:#333333;
-		border-bottom:1px solid #DDDDDD;		
+		border-bottom:1px solid #EEEEEE;		
 	}
 	
 	.recommend .recommend-title {
