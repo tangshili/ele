@@ -40,11 +40,14 @@
 <style>
 	.foot {
 		width: 100%;
-		height: 45px;
+		height: 50px;
 		position: fixed;
 		bottom: 0px;
 		left: 0px;
 		text-align: center;
+		z-index: 9999;
+		background-color:white;
+		box-shadow: 0px 0px 15px #ccc;
 	}
 	
 	.foot ul li {
@@ -64,6 +67,7 @@
 		line-height: 13px;
 		display:block;
 		color:#333333;
+		margin-top:10px;
 	}
 	
 	.foot ul li :hover span {

@@ -6,6 +6,7 @@
 		<package></package>
 		<swiper></swiper>
 		<recommend></recommend>
+		<merchant></merchant>
 		<foot></foot>
 	</div>
 
@@ -19,6 +20,7 @@
 	import Package from '@/components/Home/Package.vue'
 	import Swiper from '@/components/Home/Swiper.vue'
 	import Recommend from '@/components/Home/Recommend.vue'
+	import Merchant from '@/components/Home/Merchant.vue'
 	import Foot from '@/components/Home/Foot.vue'
 
 	export default {
@@ -30,6 +32,7 @@
 			Package,
 			Swiper,
 			Recommend,
+			Merchant,
 			Foot
 		}
 	}
