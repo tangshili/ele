@@ -1,41 +1,44 @@
 <template>
 	<div class="merchant-box">
 		<div class="merchant weui-flex" v-for="(item,index) in merchant">
-			<div class="merchant-log">
-				<img :src="item.image" />
-			</div>
-			<div class="merchant-information" style="flex:1">
-				<div class="merchant-informatin-title">
-					<span class="merchant-informatin-brand" v-text="item.title"></span>
-					<span class="merchant-inflrmatin-logo" v-text="item.name"><span style="font-weight: bold;" v-text="item.logo"></span></span>
-					<span class="merchant-inflrmatin-open" v-text="item.open"></span>
+			<!--<a href="#" v-text="item.to">-->
+				<div class="merchant-log">
+					<img :src="item.image" />
 				</div>
-				<i style="color:#FFD800; margin-top:10px;" class="fa" :class="item.icon1"></i>
-				<i style="color:#FFD000;" class="fa" :class="item.icon2"></i>
-				<i style="color:#FFC700;" class="fa" :class="item.icon3"></i>
-				<i style="color:#FFBD00;" class="fa" :class="item.icon4"></i>
-				<i style="margin-right:8px; color:#FFB200;" class="fa" :class="item.icon5"></i>
-				<span style="font-size:12px; color:#333333;" v-text="item.score"></span>
-				<span style="margin-left:3px; font-size:12px; color:#333333; display:inline-block;" v-text="item.number"></span>
-				<div class="Delivery" v-text="item.delivery"></div>
-				<div v-text="item.null"></div>
-				<div style="font-size:12px; color:#333333; margin-top:12px; display:inline-block;" v-text="item.start"></div>
-				<span style="color:#999; margin:0px 3px;" v-text="item.line"></span>
-				<span style="font-size:12px; color:#333333;" v-text="item.start"></span>
-				<div style="font-size:12px; color:#666666; float:right; margin-top:10px;" v-text="item.distance"></div>
-				<span style="color:#ccc; margin:6px 3px; float:right;" v-text="item.line"></span>
-				<span style="font-size:12px; color:#666666; float:right; margin-top:10px;" v-text="item.time"></span>
-				<div class="Varieties" v-text="item.Varieties"></div>
-				<div class="full" v-text="item.full"></div>
-				<span style="margin-top: 12px;font-size: 12px;" v-text="item.Full"></span>
-				<i style="font-size:14px; margin-left:5px; float:right;" class="fa" :class="item.caretDown"></i>
-				<span class="activity" v-text="item.activity"></span><br />
-				<div class="special" v-text="item.special"></div>
-				<span style="font-size:12px;" v-text="item.Special"></span><br />
-				<div class="first" v-text="item.first"></div>
-				<span style="font-size:12px;" v-text="item.First"> </span>
-			</div>
+				<div class="merchant-information" style="flex:1">
+					<div class="merchant-informatin-title">
+						<span class="merchant-informatin-brand" v-text="item.title"></span>
+						<span class="merchant-inflrmatin-logo" v-text="item.name"><span style="font-weight: bold;" v-text="item.logo"></span></span>
+						<span class="merchant-inflrmatin-open" v-text="item.open"></span>
+					</div>
+					<i style="color:#FFD800; margin-top:10px;" class="fa" :class="item.icon1"></i>
+					<i style="color:#FFD000;" class="fa" :class="item.icon2"></i>
+					<i style="color:#FFC700;" class="fa" :class="item.icon3"></i>
+					<i style="color:#FFBD00;" class="fa" :class="item.icon4"></i>
+					<i style="margin-right:8px; color:#FFB200;" class="fa" :class="item.icon5"></i>
+					<span style="font-size:12px; color:#333333;" v-text="item.score"></span>
+					<span style="margin-left:3px; font-size:12px; color:#333333; display:inline-block;" v-text="item.number"></span>
+					<div class="Delivery" v-text="item.delivery"></div>
+					<div v-text="item.null"></div>
+					<div style="font-size:12px; color:#333333; margin-top:12px; display:inline-block;" v-text="item.start"></div>
+					<span style="color:#999; margin:0px 3px;" v-text="item.line"></span>
+					<span style="font-size:12px; color:#333333;" v-text="item.start"></span>
+					<div style="font-size:12px; color:#666666; float:right; margin-top:10px;" v-text="item.distance"></div>
+					<span style="color:#ccc; margin:6px 3px; float:right;" v-text="item.line"></span>
+					<span style="font-size:12px; color:#666666; float:right; margin-top:10px;" v-text="item.time"></span>
+					<div class="Varieties" v-text="item.Varieties"></div>
+					<div class="full" v-text="item.full"></div>
+					<span style="margin-top: 12px;font-size: 12px;" v-text="item.Full"></span>
+					<i style="font-size:14px; margin-left:5px; float:right;" class="fa" :class="item.caretDown"></i>
+					<span class="activity" v-text="item.activity"></span><br />
+					<div class="special" v-text="item.special"></div>
+					<span style="font-size:12px;" v-text="item.Special"></span><br />
+					<div class="first" v-text="item.first"></div>
+					<span style="font-size:12px;" v-text="item.First"> </span>
+				</div>
+			<!--</a>-->
 		</div>
+		<div style="height:100px;width:100%;"></div>
 	</div>
 </template>
 
@@ -71,8 +74,9 @@
 					Special: '9.9秒杀！焦糖茶拿铁(限12:00-17:00)',
 					first: '首',
 					First: '新用户下单立减17元',
-					null:''
-				},{
+					to: '#',
+					null: ''
+				}, {
 					title: '品牌',
 					image: require('../../assets/images/food-1.png'),
 					name: '元祖蛋糕（宝山店）',
@@ -85,7 +89,7 @@
 					icon5: 'fa-star',
 					score: '4.9',
 					number: '月售198单',
-//					delivery: '蜂鸟专送',
+					//					delivery: '蜂鸟专送',
 					start: '￥100元起送',
 					freight: '免配送费',
 					line: '|',
@@ -100,8 +104,9 @@
 					Special: '单品定价',
 					first: '首',
 					First: '新用户下单立减17元',
-					null:''
-				},{
+					to: '#',
+					null: ''
+				}, {
 					title: '品牌',
 					image: require('../../assets/images/food-2.png'),
 					name: '鹿角巷(牡丹旗舰店)',
@@ -114,7 +119,7 @@
 					icon5: 'fa-star',
 					score: '4.9',
 					number: '月售2126单',
-//					delivery: '蜂鸟专送',
+					//					delivery: '蜂鸟专送',
 					start: '￥0元起送',
 					freight: '远距离配送费￥4',
 					line: '|',
@@ -129,12 +134,13 @@
 					Special: '单品定价',
 					first: '新',
 					First: '本店新用户下单立减1元',
-					null:''
-				},{
+					to: '#',
+					null: ''
+				}, {
 					title: '品牌',
-					image: require('../../assets/images/food-2.png'),
-					name: '鹿角巷(牡丹旗舰店)',
-					logo: '鹿角巷',
+					image: require('../../assets/images/food-3.png'),
+					name: '来伊份(杨行镇店)',
+					logo: '来伊份',
 					open: '...',
 					icon1: 'fa-star',
 					icon2: 'fa-star',
@@ -142,28 +148,29 @@
 					icon4: 'fa-star',
 					icon5: 'fa-star',
 					score: '4.9',
-					number: '月售2126单',
-//					delivery: '蜂鸟专送',
-					start: '￥0元起送',
-					freight: '远距离配送费￥4',
+					number: '月售245单',
+					delivery: '蜂鸟专送',
+					start: '￥25元起送',
+					freight: '远距离配送费￥7',
 					line: '|',
-					distance: '3.26公里',
-					time: '42分钟',
-					Varieties: '奶茶果汁',
+					distance: '3.90km',
+					time: '47分钟',
+					Varieties: '休闲零售',
 					full: '满',
-					Full: '满35减5，满60减10，满100减20，满…',
+					Full: '满59减25，满119减40',
 					caretDown: 'fa-care-down',
-					activity: '17个活动',
+					activity: '22个活动',
 					special: '折',
-					Special: '单品定价',
-					first: '新',
-					First: '本店新用户下单立减1元',
-					null:''
-				},{
-					title: '品牌',
-					image: require('../../assets/images/food-2.png'),
-					name: '鹿角巷(牡丹旗舰店)',
-					logo: '鹿角巷',
+					Special: '全场折扣满减同享',
+					first: '特',
+					First: '来伊份特价0.1元',
+					to: '#',
+					null: ''
+				}, {
+					//					title: '品牌',
+					image: require('../../assets/images/food-4.png'),
+					name: '好味当大食堂',
+					logo: '好味当',
 					open: '...',
 					icon1: 'fa-star',
 					icon2: 'fa-star',
@@ -171,23 +178,24 @@
 					icon4: 'fa-star',
 					icon5: 'fa-star',
 					score: '4.9',
-					number: '月售2126单',
-//					delivery: '蜂鸟专送',
-					start: '￥0元起送',
-					freight: '远距离配送费￥4',
+					number: '月售601单',
+					//					delivery: '蜂鸟专送',
+					start: '￥15元起送',
+					freight: '配送费￥1.8',
 					line: '|',
-					distance: '3.26公里',
-					time: '42分钟',
-					Varieties: '奶茶果汁',
+					distance: '1.28km',
+					time: '34分钟',
+					Varieties: '川湘菜',
 					full: '满',
-					Full: '满35减5，满60减10，满100减20，满…',
+					Full: '满30减20，满55减25，满105减35',
 					caretDown: 'fa-care-down',
-					activity: '17个活动',
-					special: '折',
+					activity: '4个活动',
+					special: '特',
 					Special: '单品定价',
-					first: '新',
-					First: '本店新用户下单立减1元',
-					null:''
+					first: '首',
+					First: '本店新用户下单立减16元',
+					to: '#',
+					null: ''
 				}]
 			}
 		}
