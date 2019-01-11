@@ -8,6 +8,7 @@
 		<recommend></recommend>
 		<merchant></merchant>
 		<foot></foot>
+
 	</div>
 
 </template>
@@ -23,6 +24,7 @@
 	import Merchant from '@/components/Home/Merchant.vue'
 	import Foot from '@/components/Home/Foot.vue'
 
+
 	export default {
 		name: 'home',
 		components: {
@@ -34,6 +36,7 @@
 			Recommend,
 			Merchant,
 			Foot
+			
 		}
 	}
 </script>
